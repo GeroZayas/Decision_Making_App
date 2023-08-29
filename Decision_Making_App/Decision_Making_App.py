@@ -5,7 +5,9 @@ class State(rx.State):
     
 def index():
     return rx.vstack(
-        rx.text("Hello World!", color="darkred", font_size="5.5em")
+        heading_top = rx.heading(
+            "Gero's Decision Maker", color="#b93418", font_size="3.5em"
+            )
     )
     
 
