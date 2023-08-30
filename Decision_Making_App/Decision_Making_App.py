@@ -31,12 +31,13 @@ def index():
             "Gero's Decision Maker", color="#b93418", font_size="3.5em"
             ), 
         rx.form(
-            rx.vstack(
+            rx.hstack(
                 rx.input(placeholder="Insert task...", id="task"),
                 rx.button("Add task", type_="submit"),
             ),
             on_submit=FormState.handle_submit,
         ),
+        rx.button("Decide", type_="submit", color='red'),
         rx.divider(),
         rx.heading("Results"),
         rx.text(FormState.form_data.to_string()),
