@@ -12,7 +12,7 @@ dict_of_tasks = defaultdict(int)
 
 on = True
 while on:
-    new_task = input("Insert task or leave blank to stop: ")
+    new_task = input("Insert TASK (leave blank to stop): ")
     if new_task in ['', ' ', '   ']:
         on = False
     else:
