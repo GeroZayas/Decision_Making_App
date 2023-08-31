@@ -22,6 +22,7 @@ task_combinations = list(combinations(dict_of_tasks.keys(), 2))
 # print(f"==>> task_combinations: {task_combinations}")
 
 for task_comb in task_combinations:
+    print("\nWhat is more important and urgent?\n")
     print("1 -> ", f"||{task_comb[0]}||", end=' or 2 -> ')
     print(f"||{task_comb[1]}||")
     user_choice = input("::: ")
