@@ -22,7 +22,7 @@ task_combinations = list(combinations(dict_of_tasks.keys(), 2))
 # print(f"==>> task_combinations: {task_combinations}")
 
 for task_comb in task_combinations:
-    print("1", task_comb[0], end=' or 2 ')
+    print("1 -> ", task_comb[0], end=' or 2 -> ')
     print(task_comb[1])
     user_choice = input("::: ")
     if user_choice == '1':
