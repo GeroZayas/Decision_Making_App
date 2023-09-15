@@ -1,9 +1,7 @@
-# TODO: input the tasks
-# TODO: See list of tasks
-# present two at a time
-# user chooses one, that one gets a point
-# compare each task, select the one with more points
-# if two have same amount of points, choose the one that won over those two
+# TODO -> User inserts tasks and 
+# ranks them in importance or urgency from 0(min) to 10(max)
+# TODO -> The program compares the tasks with the same ranking 
+# TODO -> 
 
 from collections import defaultdict
 from itertools import combinations
@@ -22,7 +20,7 @@ task_combinations = list(combinations(dict_of_tasks.keys(), 2))
 # print(f"==>> task_combinations: {task_combinations}")
 
 for task_comb in task_combinations:
-    print("\nWhat is more important and urgent?\n")
+    print("\nWhat is more important and urgent right now?\n")
     print("1 -> ", f"||{task_comb[0]}||", end=' or 2 -> ')
     print(f"||{task_comb[1]}||")
     user_choice = input("::: ")
