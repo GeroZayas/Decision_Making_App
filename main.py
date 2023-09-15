@@ -1,7 +1,6 @@
 # TODO -> User inserts tasks and
 # ranks them in importance or urgency from 0(min) to 10(max)
 # TODO -> The program compares the tasks with the same ranking
-# TODO -> Insert date
 
 from collections import defaultdict
 from itertools import combinations
@@ -15,10 +14,15 @@ dict_of_tasks = defaultdict(int)
 on = True
 while on:
     new_task = input("Insert TASK (leave blank to stop): ")
+    if new_task:
+        new_task_rank = int(input("Insert ranking (0-10): "))
     if new_task in ["", " ", "   "]:
         on = False
     else:
-        dict_of_tasks[new_task]
+        dict_of_tasks[new_task] = new_task_rank
+
+same_rank_tasks = []
+
 
 task_combinations = list(combinations(dict_of_tasks.keys(), 2))
 # print(f"==>> task_combinations: {task_combinations}")
